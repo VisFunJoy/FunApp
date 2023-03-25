@@ -1,0 +1,33 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "assets/fonts/ComicNeue-Bold.otf",
+      "sha1": "123466260d7815804fc4f688559fa91f437d304f"
+    },
+    {
+      "path": "assets/fonts/ComicNeue-BoldItalic.otf",
+      "sha1": "4a7f692735e1df664061034968e88d286060f659"
+    },
+    {
+      "path": "assets/fonts/ComicNeue-Italic.otf",
+      "sha1": "4d9a127ae6813371a049e15002e4673f475cc169"
+    },
+    {
+      "path": "assets/fonts/ComicNeue-Light.otf",
+      "sha1": "52130cd58ba7bddca71047698aa88fbc06af148f"
+    },
+    {
+      "path": "assets/fonts/ComicNeue-LightItalic.otf",
+      "sha1": "db690690bf6e82719a876ec459ced4b677741197"
+    },
+    {
+      "path": "assets/fonts/ComicNeue-Regular.otf",
+      "sha1": "1398999ce1bb32302e7e578f9c587402043ce0d1"
+    },
+    {
+      "path": "assets/fonts/DeliciousHandrawn-Regular.ttf",
+      "sha1": "9e4819205e39339f2344c22f57940bd46551b600"
+    }
+  ]
+}
