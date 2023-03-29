@@ -8,6 +8,7 @@
 import React, {useState} from 'react';
 import {
   Image,
+  KeyboardAvoidingView,
   SafeAreaView,
   StatusBar,
   StyleSheet,
@@ -21,7 +22,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import { COLORS, peacockGradientColors } from './src/common/constants';
 import LinearGradient from 'react-native-linear-gradient';
-import { TextInput } from 'react-native-paper';
+import { TextInput, Button } from 'react-native-paper';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -33,7 +34,7 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView style={[backgroundStyle, styles.mainWrapper]}>
+    <KeyboardAvoidingView style={[backgroundStyle, styles.mainWrapper]}>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={COLORS.appColor1}
@@ -43,7 +44,7 @@ function App(): JSX.Element {
           <Image source={require('./src/assets/images/FunJoyLogoCircle.png')} style={styles.logo}/>
           <Text style={styles.headingText}>Fun App</Text>
         </View>
-        <View style={{flex: 4}}>
+        <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
           <TextInput
             mode='flat'
             label="Email or Mobile Number"
@@ -62,32 +63,37 @@ function App(): JSX.Element {
             onChangeText={text => setPassword(text)}
             underlineColor={COLORS.appColor4}
             activeUnderlineColor={COLORS.appColor4}
-            style={{width: '90%', alignSelf: 'center', backgroundColor: COLORS.appColor5, marginTop: 20}}
+            style={{width: '90%', alignSelf: 'center', backgroundColor: COLORS.appColor5, marginTop: 35}}
           />
         </View>
-        <View style={{flex: 2}}>
-
+        <View style={{flex: 2, justifyContent: 'center', alignItems: 'center'}}>
+          <Button mode="contained" onPress={() => console.log('Pressed')} style={{width: '80%', alignSelf: 'center'}}>
+            Login
+          </Button>
+          <Text style={{fontSize: 20, fontFamily: 'ComicNeue-Bold', color: COLORS.white, marginVertical: 10}}>Or</Text>
+          <Button mode="contained" onPress={() => console.log('Pressed')} style={{width: '80%', alignSelf: 'center'}}>
+            SignUp
+          </Button>
         </View>
         <View style={{flex: 2}}>
 
         </View> 
       </LinearGradient>
-    </SafeAreaView>
+    </KeyboardAvoidingView>
   );
 }
 
 const styles = StyleSheet.create({
  mainWrapper: {
-  flex: 1,
-  justifyContent: 'center',
-  alignItems: 'center'
+  flex: 1
  },
  logo: {
   width: undefined,
-  height: '50%',
+  height: '40%',
   aspectRatio: 1
  },
  linearGradient: {
+  flex: 1,
   width: '100%',
   height: '100%'
  },
