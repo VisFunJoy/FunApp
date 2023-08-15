@@ -23,15 +23,10 @@ import {
 import { COLORS, peacockGradientColors } from './src/common/constants';
 import LinearGradient from 'react-native-linear-gradient';
 import { TextInput, Button } from 'react-native-paper';
+import { NavigationContainer } from '@react-navigation/native';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-  const [userField, setUserField] = useState('');
-  const [password, setPassword] = useState('');
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  
 
   return (
     <KeyboardAvoidingView style={[backgroundStyle, styles.mainWrapper]}>
@@ -82,30 +77,5 @@ function App(): JSX.Element {
     </KeyboardAvoidingView>
   );
 }
-
-const styles = StyleSheet.create({
- mainWrapper: {
-  flex: 1
- },
- logo: {
-  width: undefined,
-  height: '40%',
-  aspectRatio: 1
- },
- linearGradient: {
-  flex: 1,
-  width: '100%',
-  height: '100%'
- },
- headingText: {
-  fontSize: 22,
-  fontFamily: 'ComicNeue-Bold',
-  marginVertical: 10,
-  color: COLORS.white,
-  textShadowColor: COLORS.yellow,
-  textShadowOffset: {width: 1, height: 1},
-   textShadowRadius: 1
- }
-});
 
 export default App;
